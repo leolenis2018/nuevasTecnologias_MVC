@@ -5,6 +5,10 @@
  */
 package mvc;
 
+import mvc.Controladores.Controlador;
+import mvc.Modelos.Modelo;
+import mvc.Vistas.Vista;
+
 /**
  *
  * @author Usuario
@@ -16,6 +20,12 @@ public class MVC {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+
+        Vista vista = new Vista();
+        vista.setVisible(true);
+        Modelo modelo = new Modelo();
+        
+       Controlador controlador= new Controlador (modelo, vista);
     }
-    
+
 }
